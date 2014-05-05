@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Binnenkort online
+title: ""
 date: {}
 categories: update
 published: true
 ---
 
-Kom binnenkort terug voor een update! Hahahahaha
+Hoi
