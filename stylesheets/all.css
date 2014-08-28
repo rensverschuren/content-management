@@ -1929,11 +1929,16 @@ hr {
 
 /* line 13, /Users/rens/Sites/rethink/source/stylesheets/components/_flexible_content.scss */
 .type-toggle {
+  transition: all 0.3s;
+  border-radius: 50%;
   cursor: pointer; }
-  /* line 15, /Users/rens/Sites/rethink/source/stylesheets/components/_flexible_content.scss */
+  /* line 18, /Users/rens/Sites/rethink/source/stylesheets/components/_flexible_content.scss */
   .type-toggle.wiggle {
     -webkit-animation: wiggle 0.5s;
     -webkit-animation-iteration-count: 5; }
+  /* line 22, /Users/rens/Sites/rethink/source/stylesheets/components/_flexible_content.scss */
+  .type-toggle.pressed {
+    -webkit-filter: brightness(1.2); }
 
 /* line 1, /Users/rens/Sites/rethink/source/stylesheets/components/_best_ux.scss */
 .wrap {

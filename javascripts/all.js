@@ -1614,23 +1614,53 @@ $(document).ready(function(){
 	  controls: false
 	});
 
-	$(".laptop").hover(function() {
-		slider.goToSlide(1);
-	}, function() {
-		slider.goToSlide(0);
-	});
+	var isTouch = navigator.userAgent.match(/iPad|iPhone/i) != null;
 
-	$(".tablet").hover(function() {
-		slider.goToSlide(2);
-	}, function() {
-		slider.goToSlide(0);
-	});
+	if(!isTouch){
+	  $(".laptop").hover(function() {
+	  	$(this).addClass("pressed");
+			slider.goToSlide(1);
+		}, function() {
+			slider.goToSlide(0);
+			$(this).removeClass("pressed");
+		});
 
-	$(".watch").hover(function() {
-		slider.goToSlide(3);
-	}, function() {
-		slider.goToSlide(0);
-	});
+		$(".tablet").hover(function() {
+			slider.goToSlide(2);
+			$(this).addClass("pressed");
+		}, function() {
+			slider.goToSlide(0);
+			$(this).removeClass("pressed");
+		});
+
+		$(".watch").hover(function() {
+			slider.goToSlide(3);
+			$(this).addClass("pressed");
+		}, function() {
+			slider.goToSlide(0);
+			$(this).removeClass("pressed");
+		});
+	}
+	else{
+	  $(".laptop").on("click", function() {
+			slider.goToSlide(1);
+			$('.type-toggle').removeClass("pressed");
+			$(this).addClass("pressed");
+		});
+
+		$(".tablet").on("click", function() {
+			slider.goToSlide(2);
+			$('.type-toggle').removeClass("pressed");
+			$(this).addClass("pressed");
+		});
+
+		$(".watch").on("click", function() {
+			slider.goToSlide(3);
+			$('.type-toggle').removeClass("pressed");
+			$(this).addClass("pressed");
+		});
+	}
+	
 
 	//$(".equalify").equalHeights();
 
